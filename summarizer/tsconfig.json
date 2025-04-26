@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    /* Node 20 runtime */
+    "target": "ES2022",
+    "module": "ES2022",
+    "moduleResolution": "node",
+    /* Emit into ./build (keeps root clean) */
+    "rootDir": "./",
+    "outDir": "./build",
+    /* Safety / convenience flags */
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true
+  },
+  /* <-- NEW: match anything ending in .ts anywhere in the flake src  */
+  "include": [
+    "**/*.ts"
+  ]
+}
