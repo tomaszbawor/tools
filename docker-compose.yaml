@@ -1,11 +1,20 @@
 services:
   open-webui-knowledge:
-    image: ghcr.io/open-webui/open-webui:main
+    image: ghcr.io/open-webui/open-webui:0.6.5
     container_name: open-webui-knowledge
     restart: unless-stopped
+
+    # Expose the OpenWebUI port
     ports:
       - "4321:8080"
+
+    # Tell the container how to reach Ollama on the host
     environment:
-      - OLLAMA_API_BASE_URL=http://ollama:11434
+      - OLLAMA_API_BASE_URL=http://host.docker.internal:11434
+
+    # Map host.docker.internal to the host gateway IP
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
     volumes:
       - ./docker_data/open-webui:/app/backend/data
