@@ -13,7 +13,7 @@
   "devDependencies": {
     "@types/node": "^22.15.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "typescript": "^6.0.0"
   },
   "dependencies": {
     "@dqbd/tiktoken": "^1.0.21",
